@@ -13,9 +13,11 @@ function YesNoQuest(quest, ans){
         answer = 'n';
     }
     if(answer === ans){
+        //console.log(rightAns);
         alert(rightAns);
     }
     else{
+        // console.log(wrongAns);
         alert(wrongAns);
     }
 }
