@@ -33,55 +33,63 @@ YesNoQuest("Is  my major Computer Science?", 'n');
 YesNoQuest("Do I love football?", 'y');
 
 // Sixth Question 
+function SixthQuestion() {
+    let sixthCorrectAns = 4;
+    let i = 0;
 
-let sixthCorrectAns = 4;
-let i = 0;
+    for (i = 0; i < 4; i++) {
+        let sixthAns = prompt("How many languages do I have in my experience?");
+        if (sixthAns > sixthCorrectAns) {
+            alert('Too high');
+        }
+        else if (sixthAns < sixthCorrectAns) {
+            alert('Too low');
+        }
+        else if (sixthAns == sixthCorrectAns) {
+            alert(rightAns);
+            totalScore += 10;
+            break;
+        }
+        else if (typeof sixthAns != 'number') {
+            alert('Wrong input');
+        }
+    }
 
-for (i = 0; i < 4; i++) {
-    let sixthAns = prompt("How many languages do I have in my experience?");
-    if (sixthAns > sixthCorrectAns) {
-        alert('Too high');
-    }
-    else if (sixthAns < sixthCorrectAns) {
-        alert('Too low');
-    }
-    else if (sixthAns == sixthCorrectAns) {
-        alert(rightAns);
-        totalScore += 10;
-        break;
-    }
-    else if (typeof sixthAns != 'number') {
-        alert('Wrong input');
+    if (i === 4) {
+        alert(wrongAns + '.Correct answer is ' + sixthCorrectAns);
     }
 }
 
-if (i === 4) {
-    alert(wrongAns + '.Correct answer is ' + sixthCorrectAns);
-}
+SixthQuestion();
 
 // Seventh Question
-let seventhCorrectAns = ['top gun maveric', 'tenet', 'the amazing spiderman', 'spiderman: homecoming'];
+function SeventhQuestion() {
+    let seventhCorrectAns = ['top gun maveric', 'tenet', 'the amazing spiderman', 'spiderman: homecoming'];
 
-for (i = 0; i < 6; i++) {
-    let seventhAns = prompt("Which movie is in my top 4 favorite movies?");
-    seventhAns = seventhAns.toLowerCase();
-    if (seventhCorrectAns.includes(seventhAns)) {
-        alert(rightAns);
-        totalScore += 10;
-        break;
+    for (let i = 0; i < 6; i++) {
+        let seventhAns = prompt("Which movie is in my top 4 favorite movies?");
+        seventhAns = seventhAns.toLowerCase();
+        if (seventhCorrectAns.includes(seventhAns)) {
+            alert(rightAns);
+            totalScore += 10;
+            break;
+        }
+        else {
+            alert(wrongAns);
+        }
     }
-    else {
-        alert(wrongAns);
+
+    let correctAnsString = "";
+    for (let i = 0; i < seventhCorrectAns.length; i++) {
+        correctAnsString += seventhCorrectAns[i];
+        if (i < seventhCorrectAns.length - 1)
+            correctAnsString += ', ';
     }
+
+    alert("Correct answers: " + correctAnsString);
 }
 
-let correctAnsString = "";
-for (i = 0; i < seventhCorrectAns.length; i++) {
-    correctAnsString += seventhCorrectAns[i];
-    if (i < seventhCorrectAns.length - 1)
-        correctAnsString += ', ';
-}
+SeventhQuestion(); // function call
 
-alert("Correct answers: " + correctAnsString);
 alert("You total score: " + totalScore + ". You have answered correctly " + totalScore / 10 + " answers.");
 alert("Thank you for joining, " + userName); 
