@@ -1,0 +1,43 @@
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 2%;
+}
+
+h1 {
+    background-color: antiquewhite;
+    color: #C25800;
+    text-align: center;
+    padding: 1rem;
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 2px 2px 3px grey;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+p {
+    line-height: 1.6;
+    margin-top: 1em;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+li {
+    margin: 1rem;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
